@@ -12,6 +12,7 @@ body{
 .leftside{
     position: relative;
     width: 50%;
+    display: block
     
 }
 img.logo{
@@ -23,7 +24,15 @@ img.logo{
     opacity: 0.95;
     border-radius: 25px;
 }
+.leftside a:link{
+  color: white;
+}
 
+.leftside a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
 .leftside img.dish{
     position: relative;
     z-index: -1;
@@ -53,15 +62,16 @@ img.logo{
 .section-1 {
     background-color: rgba(62, 97, 32, 0.88);
     color: white;
-    height: 37.5%;
+    height: 30%;
     text-align: center;
     padding-left: 10%;
-    padding-top: 15%;
-    padding-bottom: 10%;
+    padding-top: 8%;
+    padding-bottom: 12%;
     font-size: 20px;
 }
-.section-1 p {
+.section-1 p{
     margin: 5%;
+
 }
 
 .section-2{
@@ -107,12 +117,16 @@ img.logo{
   }
 .section-3{
     background-color:rgba(180, 180, 180, 0.3);
-    height: 37.5%;
+    height: 45%;
     padding: 5% 5%;
 }
 .section-3 p{
     margin-top: 3%;
 
+}
+
+.form-row input.unmatched {
+  label: "Passwords do not match";
 }
 .form-row button {
     font-size: 16px;
@@ -136,3 +150,14 @@ img.logo{
   .form-row button:active {
     background-color: rgb(56, 107, 11);
   }
+/* Media query to hide left-side for screens smaller than 600px */
+  @media (max-width: 1100px) {
+    .leftside {
+        display: none;
+    }
+
+    .rightside{
+      width:100%;
+      height: 100%;
+    }
+}
